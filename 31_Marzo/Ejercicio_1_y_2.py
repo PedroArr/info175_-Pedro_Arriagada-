@@ -47,7 +47,11 @@ class camion(vehiculo):
     def quitar_acoplado(self):
         del self.acoplados[len(self.acoplados)-1]
     def obtener_acoplados(self):
-        return self.acoplados
+        for i in range(len(self.acoplados)):
+            print ("Acoplado "+str(i+1)+":")
+            print ("Ruedas: "+str(self.acoplados[i].ruedas))
+            print ("Peso: "+str(self.acoplados[i].peso))
+            print ("Carga: "+str(self.acoplados[i].carga))
     def obtener_ruedas(self):
         return self.ruedas
     def obtener_peso(self):
